@@ -22,7 +22,7 @@ export const FetchNft: FC = () => {
 
     // fetch off chain metadata for each NFT
     let nftData = []
-    for (let i = 0; i < nfts.length; i++) {
+    for (let i = 0; i < nfts.getResult.length; i++) {
       let fetchResult = await fetch(nfts[i].uri)
       let json = await fetchResult.json()
       nftData.push(json)
